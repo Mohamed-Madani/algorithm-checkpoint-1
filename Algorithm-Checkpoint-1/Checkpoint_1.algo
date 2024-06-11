@@ -1,0 +1,30 @@
+ALGORITHM algorithm_name
+VAR
+    sentence : STRING
+    number_of_word : INTEGER := 0
+    number_of_character : INTEGER := 0
+    number_of_vowel : INTEGER := 0
+    i : INTEGER := 0
+    j : INTEGER := 0
+    k : INTEGER := 0
+BEGIN
+    read(sentence);
+    FOR i FROM 1 TO sentence STEP DO
+        IF (sentence[i] == '.') THEN
+            number_of_character := number_of_character + 1;
+            write(number_of_character + 1) ; 
+        END_IF
+    END_FOR
+    FOR j FROM 1 TO sentence STEP DO
+        IF (sentence[i] + 1 == ' ') THEN
+            number_of_word := number_of_word + 1;
+            write(number_of_word) ; 
+        END_IF
+    END_FOR
+    FOR k FROM 1 TO sentence STEP DO
+        IF (sentence[i] == 'a' or 'e' or 'u' or 'i' or 'o') THEN
+            number_of_vowel := number_of_vowel + 1;
+            write(number_of_vowel) ; 
+        END_IF
+    END_FOR
+END
